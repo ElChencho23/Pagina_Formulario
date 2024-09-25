@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>FORMULARIO MACHIN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        .body {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .box-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            padding: 20px;
+            background-color: #b6aaaa;
+            border-radius: 10px;
+            margin: 15px;
+            width: 300px;
+        }
+
+        canvas {
+            margin-top: 20px;
+            display: none; /* Ocultar el canvas inicialmente */
+        }
+
+        .question {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="#">
+                <img src="img/logo.png" height="40%" width="40%" alt="logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="#">OTROS TEST</a>
+            <a href="#">RESULTADOS ANTERIORES</a>
+            <a href="#">NEW TEST</a>
+        </nav>
+    </div>
+    <header class="content header">
+        <h2 class="title">
+            POR FAVOR CONTESTA LO SIGUIENTE
+        </h2>
+       
+    </header>
+    <section class="content sau">
+        <h2 class="title">INSTRUCCIONES:</h2>
+        <p>
+            Elige una opción con la que más te identifiques
+        </p>
+        <div class="box-container">
+
+            <div class="box">
+                <h3 class="question">1. ¿Cuál de las siguientes actividades disfrutas más?</h3>
+                <label><input type="radio" name="actividad1" value="auditivo"> Escuchar música</label><br>
+                <label><input type="radio" name="actividad1" value="visual"> Ver películas</label><br>
+                <label><input type="radio" name="actividad1" value="cinestesico"> Bailar con buena música</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">2. ¿Qué programa de televisión prefieres?</h3>
+                <label><input type="radio" name="programa2" value="visual"> Reportajes de descubrimientos y lugares</label><br>
+                <label><input type="radio" name="programa2" value="cinestesico"> Cómico y de entretenimiento</label><br>
+                <label><input type="radio" name="programa2" value="auditivo"> Noticias del mundo</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">3. Cuando conversas con otra persona, tú:</h3>
+                <label><input type="radio" name="conversacion3" value="auditivo"> La escuchas atentamente</label><br>
+                <label><input type="radio" name="conversacion3" value="visual"> La observas</label><br>
+                <label><input type="radio" name="conversacion3" value="cinestesico"> Tiendes a tocarla</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">4. Si pudieras adquirir uno de los siguientes artículos, ¿cuál elegirías?</h3>
+                <label><input type="radio" name="articulo4" value="cinestesico"> Un jacuzzi</label><br>
+                <label><input type="radio" name="articulo4" value="auditivo"> Un estéreo</label><br>
+                <label><input type="radio" name="articulo4" value="visual"> Un televisor</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">5. ¿Qué prefieres hacer un sábado por la tarde?</h3>
+                <label><input type="radio" name="sabado5" value="cinestesico"> Quedarte en casa</label><br>
+                <label><input type="radio" name="sabado5" value="auditivo"> Ir a un concierto</label><br>
+                <label><input type="radio" name="sabado5" value="visual"> Ir al cine</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">6. ¿Qué tipo de exámenes se te facilitan más?</h3>
+                <label><input type="radio" name="examen6" value="auditivo"> Examen oral</label><br>
+                <label><input type="radio" name="examen6" value="visual"> Examen escrito</label><br>
+                <label><input type="radio" name="examen6" value="cinestesico"> Examen de opción múltiple</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">7. ¿Cómo te orientas más fácilmente?</h3>
+                <label><input type="radio" name="orientacion7" value="visual"> Mediante el uso de un mapa</label><br>
+                <label><input type="radio" name="orientacion7" value="auditivo"> Pidiendo indicaciones</label><br>
+                <label><input type="radio" name="orientacion7" value="cinestesico"> A través de la intuición</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">8. ¿En qué prefieres ocupar tu tiempo en un lugar de descanso?</h3>
+                <label><input type="radio" name="descanso8" value="auditivo"> Pensar</label><br>
+                <label><input type="radio" name="descanso8" value="visual"> Caminar por los alrededores</label><br>
+                <label><input type="radio" name="descanso8" value="cinestesico"> Descansar</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">9. ¿Qué te halaga más?</h3>
+                <label><input type="radio" name="halago9" value="visual"> Que te digan que tienes buen aspecto</label><br>
+                <label><input type="radio" name="halago9" value="cinestesico"> Que te digan que tienes un trato muy agradable</label><br>
+                <label><input type="radio" name="halago9" value="auditivo"> Que te digan que tienes una conversación interesante</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">10. ¿Cuál de estos ambientes te atrae más?</h3>
+                <label><input type="radio" name="ambiente10" value="cinestesico"> Uno en el que se sienta un clima agradable</label><br>
+                <label><input type="radio" name="ambiente10" value="auditivo"> Uno en el que se escuchen las olas del mar</label><br>
+                <label><input type="radio" name="ambiente10" value="visual"> Uno con una hermosa vista al océano</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">11. ¿De qué manera se te facilita aprender algo?</h3>
+                <label><input type="radio" name="aprendizaje11" value="auditivo"> Repitiendo en voz alta</label><br>
+                <label><input type="radio" name="aprendizaje11" value="visual"> Escribiéndolo varias veces</label><br>
+                <label><input type="radio" name="aprendizaje11" value="cinestesico"> Relacionándolo con algo divertido</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">12. ¿A qué evento preferirías asistir?</h3>
+                <label><input type="radio" name="evento12" value="cinestesico"> A una reunión social</label><br>
+                <label><input type="radio" name="evento12" value="visual"> A una exposición de arte</label><br>
+                <label><input type="radio" name="evento12" value="auditivo"> A una conferencia</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">13. ¿De qué manera te formas una opinión de otras personas?</h3>
+                <label><input type="radio" name="opinion13" value="auditivo"> Por la sinceridad en su voz</label><br>
+                <label><input type="radio" name="opinion13" value="cinestesico"> Por la forma de estrecharte la mano</label><br>
+                <label><input type="radio" name="opinion13" value="visual"> Por su aspecto</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">14. ¿Cómo te consideras?</h3>
+                <label><input type="radio" name="autoevaluacion14" value="visual"> Atlético</label><br>
+                <label><input type="radio" name="autoevaluacion14" value="auditivo"> Intelectual</label><br>
+                <label><input type="radio" name="autoevaluacion14" value="cinestesico"> Sociable</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">15. ¿Qué tipo de películas te gustan más?</h3>
+                <label><input type="radio" name="peliculas15" value="auditivo"> Clásicas</label><br>
+                <label><input type="radio" name="peliculas15" value="visual"> De acción</label><br>
+                <label><input type="radio" name="peliculas15" value="cinestesico"> De amor</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">16. ¿Cómo prefieres mantenerte en contacto con otra persona?</h3>
+                <label><input type="radio" name="contacto16" value="visual"> Por correo electrónico</label><br>
+                <label><input type="radio" name="contacto16" value="cinestesico"> Tomando un café juntos</label><br>
+                <label><input type="radio" name="contacto16" value="auditivo"> Por teléfono</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">17. ¿Cuál de las siguientes frases se identifican más contigo?</h3>
+                <label><input type="radio" name="frase17" value="cinestesico"> Me gusta que mi coche se sienta bien al conducirlo</label><br>
+                <label><input type="radio" name="frase17" value="auditivo"> Percibo hasta el más ligero ruido que hace mi coche</label><br>
+                <label><input type="radio" name="frase17" value="visual"> Es importante que mi coche esté limpio por fuera y por dentro</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">18. ¿Cómo prefieres pasar el tiempo con tu novia o novio?</h3>
+                <label><input type="radio" name="tiempo18" value="auditivo"> Conversando</label><br>
+                <label><input type="radio" name="tiempo18" value="cinestesico"> Acariciándose</label><br>
+                <label><input type="radio" name="tiempo18" value="visual"> Mirando algo juntos</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">19. Si no encuentras las llaves en una bolsa:</h3>
+                <label><input type="radio" name="llaves19" value="visual"> La buscas mirando</label><br>
+                <label><input type="radio" name="llaves19" value="auditivo"> Sacudes la bolsa para oír el ruido</label><br>
+                <label><input type="radio" name="llaves19" value="cinestesico"> Buscas al tacto</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">20. Cuando tratas de recordar algo, ¿cómo lo haces?</h3>
+                <label><input type="radio" name="recuerdo20" value="visual"> A través de imágenes</label><br>
+                <label><input type="radio" name="recuerdo20" value="cinestesico"> A través de emociones</label><br>
+                <label><input type="radio" name="recuerdo20" value="auditivo"> A través de sonidos</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">21. Si tuvieras dinero, ¿qué harías?</h3>
+                <label><input type="radio" name="dinero21" value="cinestesico"> Comprar una casa</label><br>
+                <label><input type="radio" name="dinero21" value="auditivo"> Viajar y conocer el mundo</label><br>
+                <label><input type="radio" name="dinero21" value="visual"> Adquirir un estudio de grabación</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">22. ¿Con qué frase te identificas más?</h3>
+                <label><input type="radio" name="frase22" value="auditivo"> Reconozco a las personas por su voz</label><br>
+                <label><input type="radio" name="frase22" value="cinestesico"> No recuerdo el aspecto de la gente</label><br>
+                <label><input type="radio" name="frase22" value="visual"> Recuerdo el aspecto de alguien, pero no su nombre</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">23. Si tuvieras que quedarte en una isla desierta, ¿qué preferirías llevar contigo?</h3>
+                <label><input type="radio" name="isla23" value="visual"> Algunos buenos libros</label><br>
+                <label><input type="radio" name="isla23" value="auditivo"> Un radio portátil de alta frecuencia</label><br>
+                <label><input type="radio" name="isla23" value="cinestesico"> Golosinas y comida enlatada</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">24. ¿Cuál de los siguientes entretenimientos prefieres?</h3>
+                <label><input type="radio" name="entretenimiento24" value="auditivo"> Tocar un instrumento musical</label><br>
+                <label><input type="radio" name="entretenimiento24" value="visual"> Sacar fotografías</label><br>
+                <label><input type="radio" name="entretenimiento24" value="cinestesico"> Actividades manuales</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">25. ¿Cómo es tu forma de vestir?</h3>
+                <label><input type="radio" name="vestir25" value="visual"> Impecable</label><br>
+                <label><input type="radio" name="vestir25" value="auditivo"> Informal</label><br>
+                <label><input type="radio" name="vestir25" value="cinestesico"> Muy informal</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">26. ¿Qué es lo que más te gusta de una fogata nocturna?</h3>
+                <label><input type="radio" name="fogata26" value="cinestesico"> El calor del fuego y los bombones asados</label><br>
+                <label><input type="radio" name="fogata26" value="auditivo"> El sonido del fuego quemando la leña</label><br>
+                <label><input type="radio" name="fogata26" value="visual"> Mirar el fuego y las estrellas</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">27. ¿Cómo se te facilita entender algo?</h3>
+                <label><input type="radio" name="entender27" value="auditivo"> Cuando te lo explican verbalmente</label><br>
+                <label><input type="radio" name="entender27" value="visual"> Cuando utilizan medios visuales</label><br>
+                <label><input type="radio" name="entender27" value="cinestesico"> Cuando se realiza a través de alguna actividad</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">28. ¿Por qué te distingues?</h3>
+                <label><input type="radio" name="distinguir28" value="cinestesico"> Por tener una gran intuición</label><br>
+                <label><input type="radio" name="distinguir28" value="auditivo"> Por ser un buen conversador</label><br>
+                <label><input type="radio" name="distinguir28" value="visual"> Por ser un buen observador</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">29. ¿Que es lo que mas disfrutas de un a anecer ?</h3>
+                <label><input type="radio" name="actividad29" value="cinestesico"> La emocion de vivir un nuevo dia </label><br>
+                <label><input type="radio" name="actividad29" value="visual"> Las tonalidades del cielo</label><br>
+                <label><input type="radio" name="actividad29" value="auditivo"> EL canto de las aves</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">30. Si pudieras elegir  que preferirias ser ?</h3>
+                <label><input type="radio" name="cancion30" value="cinestesico"> Un gran medico</label><br>
+                <label><input type="radio" name="cancion30" value="auditivo"> Un gran musico</label><br>
+                <label><input type="radio" name="cancion30" value="visual"> Un gran pintor</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">31. ¿Cuando eliges tu ropa que es lo mas importante para ti?</h3>
+                <label><input type="radio" name="tiempo31" value="auditivo"> Que sea adecuada  </label><br>
+                <label><input type="radio" name="tiempo31" value="visual"> Que luzaca bien  </label><br>
+                <label><input type="radio" name="tiempo31" value="cinestesico"> Que sea comoda </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">32. ¿Que es lo que mas disfrutas de una habitacion ?</h3>
+                <label><input type="radio" name="reunion32" value="auditivo"> Que sea silenciosa</label><br>
+                <label><input type="radio" name="reunion32" value="cinestesico"> Que sea comfortable </label><br>
+                <label><input type="radio" name="reunion32" value="visual"> Que este limpia y ordenada </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">33. ¿Que es mas sexy para ti?</h3>
+                <label><input type="radio" name="pelicula33" value="visual"> Una iluminacion tenue </label><br>
+                <label><input type="radio" name="pelicula33" value="cinestesico"> El perfume </label><br>
+                <label><input type="radio" name="pelicula33" value="auditivo"> Cierto tipo de musica </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">34. CA que tipo de espectaculo preferirias asistir ?</h3>
+                <label><input type="radio" name="pasado34" value="auditivo"> Aun concierto de musica </label><br>
+                <label><input type="radio" name="pasado34" value="visual"> Aun espectaculo de magia</label><br>
+                <label><input type="radio" name="pasado34" value="cinestesico"> A una muestra de gastronomia </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">35. ¿Qué te atrae mas de una persona ?</h3>
+                <label><input type="radio" name="libros35" value="cinestesico"> Su trato y su forma de ser</label><br>
+                <label><input type="radio" name="libros35" value="visual"> Su aspecto fisico</label><br>
+                <label><input type="radio" name="libros35" value="auditivo"> Su conversacion </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">36. Cuando vas de compras ¿en donde pasas mucho tiempo ?</h3>
+                <label><input type="radio" name="cita36" value="visual"> En una libreria </label><br>
+                <label><input type="radio" name="cita36" value="cinestesico"> En la perfumeria </label><br>
+                <label><input type="radio" name="cita36" value="auditivo"> En una tienda de discos </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">37. ¿Cuales tu idea de una noche romantica ?</h3>
+                <label><input type="radio" name="fiesta37" value="visual"> A la luz de las velas</label><br>
+                <label><input type="radio" name="fiesta37" value="auditivo"> Con musica romantica </label><br>
+                <label><input type="radio" name="fiesta37" value="cinestesico"> Bailando tranquilamente </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">38. ¿Que es lo que mas disfrutas de viajar ?</h3>
+                <label><input type="radio" name="clima38" value="cinestesico"> CConocer personas y hacer nuevos amigos </label><br>
+                <label><input type="radio" name="clima38" value="visual"> Conocer lugares nuevos </label><br>
+                <label><input type="radio" name="clima38" value="auditivo"> Aprender sobre otras costumbres </label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">39. Cuando estas en la ciudad ¿que es lo que mas hechas de menos en el campo?</h3>
+                <label><input type="radio" name="actividades39" value="cinestesico"> El aire limpio y refrescante </label><br>
+                <label><input type="radio" name="actividades39" value="visual"> Los paisajes </label><br>
+                <label><input type="radio" name="actividades39" value="auditivo"> La tranquilidad</label><br>
+            </div>
+
+            <div class="box">
+                <h3 class="question">40. Si te ofrecieran uno de los siguientes empleos ¿Cual elegirias ?</h3>
+                <label><input type="radio" name="nuevo40" value="auditivo"> Director de una estacion de radio</label><br>
+                <label><input type="radio" name="nuevo40" value="cinestesico"> Director de un club deportivo </label><br>
+                <label><input type="radio" name="nuevo40" value="visual"> Director de una revista </label><br>
+            </div>
+
+            <button id="submit">mostrar grafica </button>
+
+            <canvas id="myChart"></canvas>
+        </div>
+    </section>
+
+    <script>
+        const submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', function() {
+            let visual = 0;
+            let auditivo = 0;
+            let cinestesico = 0;
+
+            const questions = [
+                'actividad1', 'programa2', 'conversacion3', 'articulo4', 'sabado5', 'examen6', 
+                'orientacion7', 'descanso8', 'halago9', 'ambiente10', 'aprendizaje11', 
+                'evento12', 'opinion13', 'autoevaluacion14', 'peliculas15', 'contacto16', 
+                'frase17', 'tiempo18', 'llaves19', 'recuerdo20', 'dinero21', 'frase22', 
+                'isla23', 'entretenimiento24', 'vestir25', 'fogata26', 'entender27', 
+                'distinguir28', 'actividad29', 'cancion30', 'tiempo31', 'reunion32', 
+                'pelicula33', 'pasado34', 'libros35', 'cita36', 'fiesta37', 'clima38', 
+                'actividades39', 'nuevo40'
+            ];
+
+            questions.forEach(question => {
+                const checkedOption = document.querySelector(`input[name="${question}"]:checked`);
+                if (checkedOption) {
+                    const value = checkedOption.value;
+                    if (value === 'visual') {
+                        visual++;
+                    } else if (value === 'auditivo') {
+                        auditivo++;
+                    } else if (value === 'cinestesico') {
+                        cinestesico++;
+                    }
+                }
+            });
+
+            // Mostrar el gráfico
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Visual', 'Auditivo', 'Cinestésico'],
+                    datasets: [{
+                        label: 'Resultados',
+                        data: [visual, auditivo, cinestesico],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

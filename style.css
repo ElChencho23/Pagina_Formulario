@@ -1,0 +1,192 @@
+*{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+
+}
+.body{
+    text-align: center;
+    font-family: sans-serif;
+
+}
+
+.head{    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background:#d1caca ;
+    position: fixed;
+    width: 100%;
+    z-index: 100%;
+
+}
+.navbar{
+    display: flex;
+    margin-right: 10px;
+
+}
+.logo{
+    margin-right: 10px;
+
+}
+
+.logo a{
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.navbar a{
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+
+
+}
+.nabar{
+    background: #201c1c;
+
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header{
+    height: 60vh !important;
+    background: url(img/header.jpg)no-repeat center;
+    background-size: cover;
+
+}
+
+.title{
+    margin-bottom: 40px;
+    font-size: 60;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #dbcfcf
+;
+
+}
+p{
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: 0;
+    padding: 0% 100px;
+}
+
+
+.sau{
+    padding: 30px;
+    background: #b6aaaa;
+
+ }
+ .box-container b1{
+    margin: 17px;
+    width: 32px;
+    background-color: #f0f0f0; /* Cambia el fondo de la caja */
+    color: #333; /* Cambia el color del texto */
+    padding: 20px; /* Agrega espacio dentro de la caja */
+    margin-bottom: 15px; /* Espacio entre las cajas */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Añade un borde */
+
+ }
+
+ 
+ .box-container .box{
+   
+    display: block; /* Alinea los elementos dentro de la caja */
+    justify-content: left; /* Alinea el contenido a la izquierda */
+    flex-wrap: wrap; /* Para mantener los elementos alineados cuando el contenido es largo */
+    width: 700px; /* Define el ancho de la caja */
+    margin: 20px auto; /* Centra la caja horizontalmente */
+    padding: 20px; /* Espacio interno */
+    background-color: #f0f0f0; /* Fondo claro para la caja */
+    border: 1px solid #ccc; /* Borde de la caja */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle más profundidad */
+    text-align: left; /* Alinea el texto a la izquierda */
+    /*
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+   
+   
+    background: #502323;
+    text-align: left;
+    border-radius: 1rem;
+    box-shadow: 0.3rem rgba(0, 0, 0, 0.5);
+    margin: 12rem;
+    */
+ }
+ section{
+    border: 2px solid   #9c27b0;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px 0 ;
+ }
+ label{
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px dashed #9c27b0;
+    margin-bottom: 3px ;
+ }
+ /*
+ .box-container .box i{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: #9c27b0;
+    font-size: 2rem;
+    margin: 1rem 0;
+    padding: 0 15px;
+    font-size: 16px;
+
+ }
+*/
+
+ .intermedio{
+    background: #b6aaaa;
+    
+ }
+ 
+ .intermedio2{
+    padding-top: 20px;
+    background: #b6aaaa;
+    padding-bottom: 0%;
+
+
+ }
+ @media (max-width:768px){
+    .title{
+        margin-bottom: 0%;
+        font-size: 40px;
+
+    }
+    .sau{
+        height: 120vh;
+    }
+    .navbar{
+        display: none;
+    }
+ }
